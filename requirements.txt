@@ -4,5 +4,4 @@ pandas
 numpy
 streamlit
 openai
-python-dotenv
-shutil
+python-dotenv
