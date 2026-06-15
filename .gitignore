@@ -1,0 +1,5 @@
+# Ignorar venv y claves API
+venv/
+.env
+__pycache__/
+.streamlit/secrets.toml

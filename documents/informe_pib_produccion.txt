@@ -1,0 +1,72 @@
+Título: Descomposición del PIB por el enfoque de producción en Bolivia (2017–2024, serie normalizada)
+
+Resumen ejecutivo:
+- El PIB a precios de mercado (PIBmp) está normalizado a 100 en todos los años del conjunto, por lo que no hay variación del nivel de PIB; el análisis se centra en la recomposición interna.
+- Entre 2017 y 2024 cae significativamente la carga de impuestos sobre los productos (de 10,63% a 6,55% del PIB), compensada por un aumento del Valor Agregado Bruto (VAB). En 2023 aumentó la intensidad de insumos intermedios, reduciendo el VAB pese a mayor producción; en 2024 se revierte parcialmente.
+
+Análisis detallado:
+Nota de datos: La base contiene 8 años (2017–2024) y respeta las identidades: VAB = Producción − Consumo intermedio; PIBmp = VAB + impuestos sobre productos, donde “impuestos sobre productos” = IVA no deducible + otros impuestos netos. En el extracto compartido se observan valores para 2017, 2018, 2019 y 2022–2024. No se muestran 2020–2021 en el extracto; por tanto, los resultados interanuales se reportan para los años visibles.
+
+1) Identidades y normalización
+- VAB = Producción − Consumo intermedio se cumple exactamente en todos los años mostrados.
+- PIBmp = VAB + (IVA no deducible + otros impuestos netos) = 100 en cada año (serie normalizada). Por ello, la variación interanual del PIBmp es 0,0% en todo el periodo observado.
+
+2) Niveles y variaciones clave (2017 → 2024)
+- Producción: 160,09 → 166,46 (+6,38; +3,98%).
+- Consumo intermedio: 70,71 → 73,02 (+2,30; +3,26%).
+- VAB: 89,37 → 93,45 (+4,08; +4,56%).
+- Impuestos sobre productos: 10,63 → 6,55 (−4,08; −38,3% en puntos del PIB; desagregado: IVA no deducible −0,26; otros impuestos netos −3,82, equivalente a −74,0% respecto a 2017).
+Interpretación: dado que PIBmp es fijo (=100), el aumento del VAB (en puntos del PIB) refleja la contrapartida de la caída de los impuestos sobre productos.
+
+3) Intensidad de insumos y eficiencia técnica (cocientes sobre Producción)
+- Consumo intermedio/Producción:
+  - 2017: 44,17%
+  - 2023: 44,79% (máximo)
+  - 2024: 43,86% (mínimo del tramo visible 2017–2024)
+- VAB/Producción (complementario):
+  - 2017: 55,83% → 2024: 56,14%
+Se observa un repunte de la intensidad de insumos en 2023 (lo que reduce el VAB/Producción), seguido de una mejora en 2024 por menor consumo intermedio relativo.
+
+4) Dinámica interanual en los años visibles
+- VAB (% a/a):
+  - 2018: +0,89%; 2019: +1,41%; 2022: +2,29%; 2023: −0,70%; 2024: +0,61%.
+- Producción (% a/a):
+  - 2018: −0,08%; 2019: +1,57%; 2022: +3,33%; 2023: +0,22%; 2024: −1,05%.
+- Consumo intermedio (% a/a):
+  - 2018: −1,31%; 2019: +1,76%; 2022: +4,66%; 2023: +1,37%; 2024: −3,09%.
+- Impuestos sobre productos (% del PIB, puntos):
+  - Caen de 10,63 (2017) a 6,46 (2022), rebotan a 7,12 (2023) y vuelven a caer a 6,55 (2024).
+Hechos estilizados:
+- 2023: pese a mayor producción (+0,22%), el VAB cae (−0,70%) por mayor intensidad de insumos (+1,37% en consumo intermedio), coherente con ΔVAB ≈ ΔProducción − ΔConsumo intermedio.
+- 2024: la producción cae (−1,05%) pero el consumo intermedio disminuye más (−3,09%), elevando el VAB (+0,61%).
+- Los impuestos sobre productos se mueven exactamente en sentido opuesto al VAB, por la identidad PIBmp = constante.
+
+5) Desagregación de impuestos sobre productos
+- IVA no deducible: relativamente estable (2017: 5,47 → 2024: 5,21; −4,7%).
+- Otros impuestos netos: fuerte contracción (2017: 5,16 → 2024: 1,34; −74,0%), principal responsable de la menor participación total de impuestos sobre productos en el PIB.
+
+6) Marco teórico y consistencia contable
+- Identidad de cuentas nacionales (SNA 2008): PIBmp = ∑VAB a precios básicos + impuestos netos sobre productos. En esta serie, la reducción de impuestos netos sobre productos incrementa mecánicamente el peso del VAB en el PIBmp dado (100).
+- Enfoque de producción: VAB = Producción − Consumo intermedio. Un aumento de la intensidad de insumos (mayor Consumo intermedio/Producción) reduce el VAB, ceteris paribus, como se observa en 2023.
+
+7) Limitaciones
+- El PIBmp está normalizado a 100; no es posible inferir crecimiento real del PIB ni niveles absolutos.
+- Faltan en el extracto los años 2020 y 2021; los patrones interanuales completos 2019–2022 no pueden describirse sin esos puntos. El análisis se restringe a 2017–2019 y 2022–2024.
+
+Conclusiones e implicaciones para Bolivia:
+- Reconfiguración del PIB: Entre 2017 y 2024, cae la participación de los impuestos netos sobre productos en el PIB (−4,08 p.p., de 10,63% a 6,55%), con un aumento compensatorio del VAB. Esta recomposición sugiere, en términos relativos, menor contribución de la tributación sobre productos al PIB y mayor aporte del VAB.
+- Eficiencia productiva reciente: Tras un deterioro en 2023 (mayor intensidad de insumos), 2024 muestra mejora en la relación VAB/Producción por menor consumo intermedio. De sostenerse, esto implicaría una trayectoria más eficiente de generación de valor.
+- Señales fiscales: La disminución marcada de “otros impuestos netos” sobre productos es el principal cambio estructural. Si esta pauta relativa reflejase la realidad en niveles, podría implicar menor recaudación vinculada a productos o mayores subsidios netos; no obstante, el dataset normalizado no permite cuantificar montos.
+- Recomendaciones de monitoreo:
+  - Verificar los años 2020–2021 para identificar posibles quiebres de tendencia y su persistencia.
+  - Acompañar con series en niveles (no normalizadas) para evaluar impacto macro en crecimiento y finanzas públicas.
+  - Profundizar en los determinantes de la intensidad de insumos (costos y origen de insumos intermedios), dado su efecto directo sobre el VAB.
+
+Fórmulas usadas:
+- VAB_t = Producción_t − ConsumoIntermedio_t
+- ImpuestosProductos_t = IVA_no_deducible_t + Otros_impuestos_netos_t
+- PIBmp_t = VAB_t + ImpuestosProductos_t
+- Variación interanual: Δ% x_t = (x_t/x_{t−1} − 1) × 100
+- Cocientes: CI/Prod = ConsumoIntermedio/Producción; VAB/Prod = VAB/Producción; Impuestos/PIB = ImpuestosProductos/PIBmp
+
+Si desea, puedo procesar el archivo completo para incluir 2020–2021 y generar cuadros y gráficos con la descomposición anual completa.

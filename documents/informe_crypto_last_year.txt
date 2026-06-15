@@ -1,0 +1,20 @@
+No pude abrir el archivo .parquet en este entorno
+El motor requerido para leer archivos Parquet (pyarrow o fastparquet) no está disponible aquí, por lo que no puedo cargar crypto_last_year.parquet y realizar el análisis estadístico solicitado.
+
+Cómo proceder
+- Opción recomendada: convierta el archivo a CSV y súbalo nuevamente.
+  - Si tiene Python local:
+    - import pandas as pd
+    - df = pd.read_parquet("crypto_last_year.parquet")
+    - df.to_csv("crypto_last_year.csv", index=False)
+- Alternativas: también puedo trabajar con un extracto en CSV/Excel (al menos columnas: Date, symbol, Close), o con un subconjunto de símbolos/fechas.
+
+Apenas tenga el CSV, produciré un informe técnico con:
+- Cobertura: rango temporal, símbolos, días efectivos de operación.
+- Tendencias por cripto: variación acumulada (%), rendimiento diario medio, volatilidad diaria y anualizada, razón retorno/volatilidad, drawdown máximo (con fechas de pico y valle), mejores/peores días, volatilidad 30 días.
+- Correlaciones entre retornos diarios (matriz de correlación).
+- Estacionalidad: efecto día-de-semana en retornos.
+- Puntos de inflexión (picos y valles locales por ventana móvil).
+- Implicaciones macro para Bolivia: posibles efectos sobre apetito de riesgo, dolarización informal, remesas y sensibilidad a condiciones financieras globales, sin extrapolar más allá de los datos.
+
+Si prefiere, indíqueme qué símbolos priorizar (por ejemplo, BTC-USD, ETH-USD, DOGE-USD) y procederé con un análisis focalizado apenas disponga del CSV.

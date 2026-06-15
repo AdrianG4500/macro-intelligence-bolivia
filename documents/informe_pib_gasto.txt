@@ -1,0 +1,79 @@
+Informe técnico: PIB por el lado del gasto (2017–2024, anual)
+
+Resumen ejecutivo
+- El PIB por gasto creció de forma moderada, con una aceleración en 2024 (+4,86% vs 2023) impulsada por el consumo de los hogares; la inversión continúa por debajo de su pico de 2019 y el saldo externo sigue siendo deficitario.
+- La composición del gasto se ha desplazado hacia el consumo (hogares y gobierno), mientras la inversión reduce su participación en el PIB (de 24,4% en 2017 a 18,0% en 2024), lo que puede mermar el crecimiento potencial.
+
+Marco y fórmula
+- Identidad de gasto: PIB = C_hogares + C_gobierno + I + (X − M)
+- I (inversión) = Formación bruta de capital fijo (FBCF) + Variación de existencias + Objetos valiosos
+- Crecimiento (%) = (PIB_t / PIB_{t−1} − 1) × 100
+- Aportes al crecimiento (p.p.) = ΔComponente / PIB_{t−1} × 100
+
+Nota de cobertura y unidades
+- Años con datos explícitos: 2017, 2018, 2019, 2022, 2023, 2024. No se dispone de 2020–2021 en la muestra provista; las variaciones 2019→2022 reflejan cambios acumulados en el tramo sin observar.
+- No se especifican unidades ni si son precios corrientes o constantes. El análisis se mantiene en términos relativos y de composición.
+
+Análisis detallado
+
+1) Niveles y crecimiento del PIB por gasto
+- PIB (aprox.): 317,359 (2017), 334,541 (2018), 338,981 (2019), 352,127 (2022), 361,671 (2023), 379,230 (2024).
+- Crecimiento:
+  - 2018: +5,41% (desacelera en 2019 a +1,33%).
+  - 2019→2022 (variación acumulada, por falta de 2020–2021): +3,88% (≈1,27% promedio anual).
+  - 2023: +2,71%.
+  - 2024: +4,86% (aceleración).
+
+Aportes al crecimiento (p.p.)
+- 2018: +2,76 (C_hog), +1,75 (C_gob), +0,95 (I), −0,05 (X−M).
+- 2019: +1,69 (C_hog), +0,25 (C_gob), −1,03 (I), +0,41 (X−M).
+- 2019→2022 (acumulado): +3,22 (C_hog), +0,90 (C_gob), −3,96 (I), +3,71 (X−M).
+- 2023: +3,32 (C_hog), +0,93 (C_gob), +1,46 (I), −3,00 (X−M).
+- 2024: +4,04 (C_hog), +0,48 (C_gob), −0,17 (I), +0,50 (X−M).
+
+Lectura 2024 vs 2023
+- Consumo de hogares: +5,86% a/a, principal motor (+4,04 p.p.).
+- Consumo de gobierno: +2,87% a/a (+0,48 p.p.).
+- Inversión total: −0,87% a/a (resta −0,17 p.p.). Descomposición 2023→2024:
+  - FBCF: −1.059 (cae).
+  - Variación de existencias: −5.612 (pasa a negativa).
+  - Objetos valiosos: +6.074 (salto que compensa parcialmente la caída anterior).
+- Saldo externo (X−M): mejora en 1.792 (menos déficit), aportando +0,50 p.p.
+- Resultado: el crecimiento 2024 es consumo-impulsado, con leve alivio del sector externo y retroceso de la inversión productiva (FBCF).
+
+2) Composición del PIB y cambios estructurales
+- Participación en PIB (%):
+  - 2017: C_hog 66,93; C_gob 15,20; I 24,38; (X−M) −6,50.
+  - 2024: C_hog 69,63; C_gob 16,53; I 17,95; (X−M) −4,11.
+- Cambios 2017→2024:
+  - Inversión: −6,4 p.p. del PIB. Señala menor acumulación de capital.
+  - Consumo de hogares: +2,7 p.p.; gobierno: +1,3 p.p.
+  - Déficit externo se reduce en términos de PIB (de −6,5% a −4,1%).
+- Demanda interna (C + G + I): permanece por encima del PIB (104,1% del PIB en 2024 vs 106,5% en 2017), consistente con déficit externo persistente.
+
+3) Inversión y volatilidad de componentes
+- Inversión total 2024 (68,06) está 11,6% por debajo de 2019 (76,96). La FBCF cae 18,9% vs 2019.
+- 2019→2022: contracción de inversión (−13,43), dominada por FBCF (−16,47) y caída de objetos valiosos (−0,38), parcialmente compensadas por existencias (+3,42).
+- 2023→2024: el fuerte aumento en “objetos valiosos” (+6,07) y la caída de existencias (−5,61) sugieren volatilidad de la inversión no reproductiva; la FBCF continúa débil.
+
+4) Sector externo
+- Saldo externo (X−M) sigue en déficit: 2017 −20,62; 2019 −19,41; 2022 −6,82; 2023 −17,37; 2024 −15,58.
+- Apertura 2024: X/PIB 21,44%, M/PIB 25,54%; razón X/M = 0,84 (mejora vs 0,75 en 2017, pero sin equilibrio).
+- Coherencia macro: el liderazgo del consumo y la menor FBCF (intensiva en importaciones de bienes de capital) son consistentes con una ligera reducción de la “penetración importadora” del PIB, pese al aumento de la demanda.
+
+5) Síntesis de tendencias e inflexiones
+- 2018: expansión fuerte y balanceada.
+- 2019: desaceleración; la inversión resta crecimiento.
+- 2019→2022: recuperación moderada en el neto, con caída de la inversión y mejora del saldo externo. Falta la trayectoria 2020–2021.
+- 2023: repunte de inversión total (arrastre de existencias), pero deterioro del saldo externo.
+- 2024: aceleración traccionada por consumo; la FBCF cede, existencias caen, “objetos valiosos” suben con fuerza; mejora del saldo externo insuficiente para cerrar el déficit.
+
+Conclusiones e implicaciones para Bolivia
+- Crecimiento 2024 apoyado en consumo, con inversión productiva débil. La caída de la FBCF respecto de 2019 y la reducción de su peso en el PIB (−6,4 p.p. desde 2017) sugieren un deterioro del impulso de acumulación de capital, con implicancias negativas sobre el crecimiento potencial y la productividad.
+- El saldo externo sigue siendo deficitario (−4,1% del PIB en 2024). Aunque la razón X/M mejora respecto de 2017, el patrón de crecimiento con demanda interna > PIB mantiene la presión externa.
+- La volatilidad de los componentes no reproductivos de la inversión (existencias y, en 2024, objetos valiosos) introduce ruido cíclico y no sustituye la FBCF para sostener capacidad productiva.
+- Prioridades de política (a partir de la evidencia disponible):
+  - Reactivar FBCF, especialmente en sectores transables, para elevar potencial y aliviar el desequilibrio externo vía mayor oferta exportable y menor dependencia de importaciones de bienes de capital.
+  - Preservar la mejora gradual del balance externo, evitando que el impulso del consumo se traduzca en mayor brecha externa.
+  - Monitorear la composición de la inversión: aumentos en “objetos valiosos” no implican necesariamente formación de capital productivo.
+- Limitaciones: La ausencia de 2020–2021 y de información de precios/unidades impide distinguir entre variaciones reales y nominales y analizar la fase pandémica; se recomienda incorporar dichos años y especificar el año base o el tipo de precios para afinar el diagnóstico.

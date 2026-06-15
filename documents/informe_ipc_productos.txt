@@ -1,0 +1,62 @@
+Título: Auditoría estructural del listado de productos del IPC (ipc_productos.parquet)
+
+Resumen ejecutivo:
+- El archivo contiene 398 registros con una única columna “producto”. Es un catálogo de ítems del IPC, no una serie de tiempo ni un panel con precios/índices.
+- La ausencia de fechas, niveles de índice y ponderaciones impide calcular inflación, tendencias o contribuciones. Se recomiendan pasos de depuración y los datos mínimos adicionales requeridos para el análisis macro.
+
+Análisis detallado:
+1) Estructura y contenido observado
+- Dimensiones: 398 filas, 1 columna (producto).
+- La muestra de filas incluye bienes semidurables (“Abrigos, impermeables, chaquetones”), accesorios (“Accesorios del vestir”), alimentos (“Aceite comestible/Aceite a granel”), hortalizas (“Zanahoria”, “Zapallo/joco/ancu/iscariote”) y un agregado “ÍNDICE GENERAL”.
+- Interpretación: se trata de un catálogo/maestro de ítems del IPC, probablemente a nivel de variedad o agregación simple. La presencia de “ÍNDICE GENERAL” sugiere que el dataset mezcla el maestro de productos con un ítem que representa el agregado titular, lo cual conviene segregar en el análisis de ítems.
+
+2) Implicaciones para el análisis estadístico
+- Sin variables de fecha (t) ni nivel de índice por producto (I_{i,t}) y sin ponderaciones (w_i), no es posible:
+  - Calcular inflación mensual: π_t = (I_t / I_{t−1} − 1)×100
+  - Calcular inflación interanual: π_{12m,t} = (I_t / I_{t−12} − 1)×100
+  - Descomponer contribuciones: contrib_{i,t} = w_i × π_{i,t}
+  - Identificar estacionalidad, picos o quiebres estructurales.
+- Sólo es posible auditar cobertura y calidad del catálogo.
+
+3) Calidad del catálogo y normalización (hallazgos y riesgos)
+- Estandarización de nombres:
+  - Existen entradas con barras y sinónimos (“Aceite comestible/Aceite a granel”, “Zapallo/joco/ancu/iscariote”), lo que sugiere variedades consolidadas en un solo rótulo. Para consistencia, definir una convención: separar en variedades o asignar un nombre canónico con metadatos de sinónimos.
+- Posible mezcla de niveles de agregación:
+  - “ÍNDICE GENERAL” no es un producto; debe excluirse o moverse a un catálogo de agregados.
+- Trazabilidad con clasificaciones:
+  - Para comparabilidad y análisis por funciones de consumo, se recomienda mapear cada “producto” a una clasificación estándar (p.ej., COICOP) y niveles jerárquicos (División–Grupo–Clase–Variedad). Actualmente, el archivo no provee esta llave.
+- Duplicados y unicidad:
+  - No se evidencian duplicados en la muestra, pero se requiere verificación completa. La unicidad de la columna “producto” debe validarse para evitar colisiones en joins con series.
+
+4) Datos mínimos requeridos para análisis macro del IPC
+Para pasar de un listado a análisis de inflación y sus motores se requiere, al menos:
+- Series de índice por producto y fecha:
+  - fecha (mensual), producto (clave que vincula al catálogo), indice_{i,t} (nivel con base conocida, p.ej., 2020=100).
+- Ponderaciones:
+  - peso_i (en porcentaje o fracción, consistente con la canasta y el año base).
+  - Si hay actualizaciones de base, proveer puentes o factores de encadenamiento.
+- Metadatos:
+  - Base del índice, cobertura geográfica (nacional/ciudades), método de agregación (Laspeyres, encadenado), tratamiento de sustituciones, calidad, estacionalidad.
+- Opcional pero útil:
+  - Precios promedio y/o precios imputados, indicadores de recolección, códigos COICOP, identificador de ciudad/área.
+
+5) Plan de análisis propuesto (una vez disponibles las series)
+- Inflación mensual, trimestral, acumulada y 12m a nivel general y por divisiones.
+- Descomposición de contribuciones por división/producto: contrib_{i,t} = w_i × π_{i,t}
+- Identificación de outliers y clusters de volatilidad (p.ej., alimentos frescos vs. regulados).
+- Estacionalidad: estimación de patrones en hortalizas, vestimenta, etc.
+- Puntos de inflexión: detección de cambios de régimen mediante quiebres estructurales.
+- Aportes geográficos si aplica: convergencia/divergencia de inflación por ciudades.
+
+Conclusiones y posibles implicaciones para Bolivia:
+- El archivo confirma una cobertura amplia del IPC a nivel de productos (398 ítems), lo cual es valioso para diagnósticos finos de la inflación. Sin embargo, en su forma actual (solo nombres), no permite estimar variaciones, contribuciones ni inferir presiones inflacionarias sectoriales.
+- Para evaluar impactos sobre el poder adquisitivo, política monetaria o choques de oferta (ej., alimentos volátiles), se requieren las series de índice por fecha y las ponderaciones oficiales. Con estos insumos, se puede:
+  - Identificar los motores de la inflación (alimentos vs. bienes durables/no transables).
+  - Medir pass-through cambiario en rubros transables y efectos de regulaciones en precios administrados.
+  - Informar decisiones de política (subsidios focalizados, ajustes arancelarios, coordinación de expectativas).
+- Recomendación inmediata: separar “ÍNDICE GENERAL” del maestro de productos, estandarizar nombres y mapear a una clasificación jerárquica. Luego, integrar las series de índice y los pesos para proceder al análisis macroeconómico.
+
+Si lo desea, puedo:
+- Auditar el archivo completo en busca de duplicados e inconsistencias de nomenclatura.
+- Proveer una plantilla de datos para las series requeridas (columnas y formatos).
+- Integrar y producir tableros con inflación mensual, 12m y descomposiciones por contribuciones.

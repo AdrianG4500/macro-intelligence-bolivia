@@ -1,0 +1,62 @@
+Título: Evolución y composición de las Reservas Internacionales (ene-2022 a sep-2025)
+
+Resumen ejecutivo:
+- Entre ene-2022 y sep-2025, las Reservas Netas cayeron 27,0% (de 4.483,4 a 3.275,0), pese a un aumento de las reservas brutas en oro (+26,1%). La caída se explica por el desplome de las reservas brutas en divisas (-92,8%) y la reducción de otros componentes.
+- En el 3T-2025 se observa un repunte de las Reservas Netas (+20,2% entre jul y sep), explicado casi íntegramente por el aumento del oro. La liquidez en divisas permanece en niveles muy bajos (102,5 en sep-2025), con alta volatilidad.
+
+Análisis detallado:
+1) Alcance y datos
+- Frecuencia: mensual. Periodo observado: 2022-01 a 2025-09 (45 observaciones).
+- Series: Reservas Netas; Reservas Brutas Oro; Reservas Brutas Divisas.
+- Nota de medición: “Reservas Netas” y “Reservas Brutas” no son magnitudes directamente comparables 1:1. Se analiza cada serie por separado y, cuando se contrasta, se aclara que la descomposición es referencial.
+
+2) Dinámica de largo tramo (ene-2022 → sep-2025)
+- Reservas Netas: 4.483,4 → 3.275,0; variación absoluta = -1.208,4; variación porcentual = -26,95%.
+  Fórmula: Δ% = (Xt/X0 − 1)×100.
+- Reservas Brutas Oro: 2.469,7 → 3.113,7; Δ = +644,0; Δ% = +26,08%.
+- Reservas Brutas Divisas: 1.422,6 → 102,5; Δ = -1.320,1; Δ% = -92,79%.
+
+3) Composición de reservas brutas (oro vs divisas)
+- Participación del oro en las reservas brutas oro+divisas:
+  s_oro = Oro / (Oro + Divisas) × 100.
+  Ene-2022: 63,5% (2.469,7 / 3.892,3).
+  Sep-2025: 96,8% (3.113,7 / 3.216,2).
+- Relación divisas/oro:
+  Ene-2022: 0,576; Sep-2025: 0,033.
+Interpretación: la composición se inclinó fuertemente hacia oro, con virtual agotamiento de reservas en divisas.
+
+4) Tramo reciente (jul-2025 → sep-2025)
+- Reservas Netas: 2.725,7 → 3.275,0; Δ% jul–sep = +20,15%.
+  • Descomposición reciente: 
+    - Oro: 2.596,3 → 3.113,7; Δ% = +19,93%.
+    - Divisas: 67,2 → 170,7 → 102,5; Δ% jul–ago = +154,0%; ago–sep = -40,0%.
+- Mes a mes en Netas:
+  • jul→ago: +5,70%; • ago→sep: +13,67%.
+Conclusión del tramo: el repunte de Netas en 3T-2025 se explica casi totalmente por el aumento del oro; la posición en divisas sigue extremadamente baja y volátil.
+
+5) Indicador residual (referencial)
+- Residual = Reservas Netas − (Oro + Divisas). 
+  Ene-2022: 591,1; Sep-2025: 58,8; Δ = -532,3; Δ% ≈ -90,05%.
+Interpretación cauta: los “otros componentes netos” distintos de oro y divisas (p.ej., posiciones con organismos, DTS, u otros) se redujeron de forma sustantiva a lo largo del periodo.
+
+6) Tendencias, picos y puntos de inflexión
+- Tendencia de fondo: caída de Reservas Netas desde 2022, con cambio de pendiente al alza en 3T-2025 impulsado por oro.
+- Punto de inflexión reciente: julio–septiembre de 2025 (fuerte aumento en Netas y en Oro).
+- Divisas: tendencia descendente de largo plazo hasta niveles mínimos, con episodios de alta variabilidad en 2025Q3.
+- Estacionalidad: no evaluable con certeza sin revisar toda la trayectoria mensual completa y aplicar métodos de descomposición (X-13/ STL). Se recomienda análisis adicional con la serie completa.
+
+7) Marco macroeconómico y lectura teórica
+- Liquidez externa y capacidad de intervención: la marcada reducción de “Reservas Brutas Divisas” implica menor capacidad de atender pagos en moneda fuerte e intervenir en el mercado cambiario. Aun con mayores tenencias de oro, la liquidez inmediata es más restringida, salvo monetización (venta o swap del oro).
+- Riesgo de composición: el predominio del oro expone la posición externa a la volatilidad del precio del oro y a consideraciones operativas/legales para su movilización; además, típicamente el oro es menos líquido que las divisas para cubrir importaciones y obligaciones de corto plazo.
+- Señales mixtas recientes: el incremento en Reservas Netas en 3T-2025 reduce tensiones inmediatas, pero la falta de divisas sigue siendo un cuello de botella para la balanza de pagos y la gestión cambiaria.
+
+Conclusiones e implicaciones para Bolivia:
+- La posición externa neta se debilitó entre 2022 y 2025 (-27,0%), pese al aumento del oro (+26,1%). El deterioro responde principalmente al colapso de las reservas en divisas (-92,8%) y a la contracción de otros componentes netos (~-90%).
+- En 3T-2025 hay una mejora de corto plazo en Reservas Netas (+20,2% jul–sep), explicada por el oro. Sin embargo, la liquidez en divisas permanece muy baja (102,5 a sep-2025), limitando la capacidad de intervención y de pagos inmediatos en moneda fuerte.
+- Implicaciones de política:
+  • Gestión de liquidez: evaluar estrategias de monetización/swap de oro para recomponer colchón de divisas, balanceando costo financiero y riesgo de precio.
+  • Mitigación de riesgo de composición: diversificar gradualmente la canasta de activos líquidos en divisas cuando las condiciones lo permitan.
+  • Señalización y sostenibilidad: el repunte reciente es positivo, pero su sostenibilidad dependerá de flujos reales (saldo comercial, IED, deuda) y de la política cambiaria/monetaria. 
+- Próximos pasos analíticos: con la serie completa, estimar variaciones interanuales mensuales, volatilidades, y aplicar descomposición estacional para detectar patrones intranuales y fechas precisas de picos y valles.
+
+Nota: Este informe se basa exclusivamente en los puntos de datos provistos (primeras y últimas observaciones y tres meses recientes). Para un análisis estadístico integral se requiere procesar la serie completa. Si autoriza, puedo cargar y analizar el archivo “reservas.parquet” y entregar cuadros, gráficos y medidas de tendencia/volatilidad.

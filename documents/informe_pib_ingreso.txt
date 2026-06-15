@@ -1,0 +1,66 @@
+Título: Bolivia – Composición del PIB por el enfoque del ingreso (participaciones porcentuales), 2017–2024
+
+Resumen ejecutivo:
+- Entre 2017 y 2024 la participación de los impuestos netos sobre la producción y las importaciones cayó en ~4,07 pp del PIB, mientras aumentaron la remuneración de asalariados (+1,77 pp) y los ingresos de capital y mixtos en conjunto (+2,30 pp).
+- 2022 marca un punto de inflexión: allí se observan el mínimo de la participación salarial y el mínimo de impuestos, junto al máximo del excedente de explotación; 2023–2024 muestran una recomposición hacia salarios y leve corrección de impuestos.
+
+Análisis detallado:
+1) Datos y consistencia
+- Archivo: pib_ingreso.parquet. Estructura: 8 años (2017–2024), 4 componentes del PIB por ingreso: remuneración de asalariados (RA), impuestos netos (IN), excedente de explotación (EE), e ingreso mixto (IM); más año y fecha.
+- Las participaciones anuales observadas (2017, 2018, 2019, 2022, 2023, 2024) suman 100% con redondeo, consistente con s_i,t = 100 × (Y_i,t / PIB_t).
+- Nota: Los valores de 2020–2021 no fueron mostrados en el extracto; por transparencia, las métricas abajo que requieren serie completa consideran solo los años visibles.
+
+2) Niveles, variación y volatilidad (observaciones visibles)
+- Cambios 2017→2024 (pp del PIB):
+  - RA: 36,514 → 38,286 (+1,772)
+  - IN: 11,203 → 7,133 (−4,070)
+  - EE: 32,547 → 33,240 (+0,693)
+  - IM: 19,736 → 21,342 (+1,606)
+  - Ingresos de factores (RA+EE+IM) = 100 − IN: 88,797 → 92,867 (+2,298)
+- Picos y mínimos:
+  - RA: mínimo 2022 (36,083); máximo 2024 (38,286).
+  - IN: mínimo 2022 (6,932); máximo 2017 (11,203).
+  - EE: mínimo 2017 (32,547); máximo 2022 (36,113).
+  - IM: mínimo 2018 (19,700); máximo 2023 (21,642).
+- Volatilidad (desvío estándar en pp, 2017–2019 y 2022–2024):
+  - IN: 1,80 (más volátil)
+  - EE: 1,38
+  - RA: 0,83
+  - IM: 0,81
+- Relación salario/capital (RA / (EE+IM)):
+  - Máximo 2018: 0,713; mínimo 2022: 0,633; 2024: 0,701.
+  - Lectura: en 2022 la remuneración relativa del trabajo cayó frente al ingreso de capital/mixto; en 2024 se recupera a niveles cercanos a los pre-pandemia.
+
+3) Dinámica por subperíodos (pp del PIB)
+- 2017→2019 (prepandemia):
+  - RA +1,10; IN −2,18; EE +0,33; IM +0,75.
+  - Interpretación: descenso de impuestos y leve mejora simultánea de salarios y capital/mixto.
+- 2019→2022 (pandemia y salida inmediata; sin 2020–2021 en extracto, lectura neta):
+  - RA −1,53; IN −2,10; EE +3,21; IM +0,42.
+  - Giro hacia excedente de explotación, con caída de la participación salarial y de impuestos.
+- 2022→2024 (reciente):
+  - RA +2,20; IN +0,20; EE −2,87; IM +0,47.
+  - Reversión: la participación salarial repunta con reducción del excedente de explotación; impuestos rebotan levemente en 2023 y se moderan en 2024 (aún por encima de 2022).
+
+4) Relaciones entre componentes (correlaciones, 6 observaciones)
+- IN muestra correlación negativa fuerte con IM (≈ −0,90) y con EE (≈ −0,75), y baja con RA (≈ −0,05). Lectura: caídas en impuestos netos se asocian, en esta muestra, a mayores participaciones de ingresos de capital y mixtos; la relación con salarios es tenue.
+- RA vs EE: correlación negativa moderada (≈ −0,58), consistente con la rotación 2022→2024 (sube RA, baja EE).
+- Cautela: tamaño muestral reducido y falta de 2020–2021; interpretar tendencias con prudencia.
+
+5) Puntos de inflexión y estructura
+- 2022 es el punto de inflexión del periodo visible: mínimos simultáneos de RA e IN y máximo de EE, con s_factores = 100 − IN = 93,0% (máximo del tramo observable).
+- 2023–2024 muestran recomposición hacia trabajo e ingreso mixto, con normalización parcial del excedente de explotación.
+
+Conclusiones e implicaciones para Bolivia:
+- Menor peso de los impuestos netos en el PIB (−4,07 pp entre 2017 y 2024) y mayor peso de los ingresos de factores (+2,30 pp) sugieren, contablemente, que una menor recaudación neta sobre productos/producción (o mayores subsidios netos) trasladó participación hacia salarios y capital/mixto. Implicación fiscal: de mantenerse, presión sobre espacio fiscal y necesidad de financiamiento alternativo.
+- La recuperación de la participación salarial hasta un máximo en 2024 (38,29%) es consistente con una mejora del ingreso laboral formal o ajustes salariales; si no está acompañada de aumentos de productividad, puede comprimir márgenes, lo que es coherente con la caída del excedente de explotación 2022→2024.
+- El aumento tendencial del ingreso mixto (máximo en 2023 y nivel elevado en 2024) sugiere mayor peso relativo de trabajadores por cuenta propia/microempresas en el ingreso agregado. Esto puede estar asociado a mayor informalidad relativa, con efectos mixtos sobre productividad y base tributaria.
+- No se observa estacionalidad (datos anuales), pero sí cambios de composición con un quiebre claro en 2022.
+- Recomendaciones de política (condicionadas a mayor evidencia): 
+  - Fiscal: revisar el balance entre impuestos netos y subsidios a productos/producción para sostener la recaudación sin afectar la actividad; fortalecer impuestos con menor distorsión y ampliar base.
+  - Productividad y empleo: políticas de formalización y de impulso a productividad laboral que permitan sostener una mayor participación salarial sin deteriorar márgenes; facilitar inversiones que recuperen el excedente de explotación vía productividad, no vía compresión salarial.
+  - Monitoreo: incorporar los datos de 2020–2021 y niveles nominales para evaluar magnitudes en puntos del PIB y no solo participaciones.
+
+Notas:
+- Fórmulas utilizadas: s_i,t = 100 × (Y_i,t / PIB_t); Δs_i = s_i,t − s_i,t−1; s_factores = RA + EE + IM = 100 − IN.
+- Limitaciones: el extracto no incluyó los valores de 2020–2021; los resultados sobre tendencias usan 2017–2019 y 2022–2024. Para conclusiones más robustas, es recomendable incorporar toda la serie del archivo.

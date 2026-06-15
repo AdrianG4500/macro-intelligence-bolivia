@@ -1,0 +1,62 @@
+Título: Avance del IPC Bolivia (enero 2024 – septiembre 2025): notas preliminares con datos parciales
+
+Resumen ejecutivo:
+- Con la muestra proporcionada no es posible calcular variaciones mensuales, interanuales ni acumuladas del Índice General por no contar con la serie completa ni poder leer el archivo Parquet en este entorno.
+- Se identifican únicamente observaciones puntuales: el Índice General registra 111,211 en enero de 2024; en septiembre de 2025 algunos servicios administrados se mantienen en torno a 100 (sin variación acumulada desde el período base), mientras “Servicios religiosos” alcanza 129,078 (+29,1% acumulado respecto al período base).
+- Para un informe completo se requiere la serie mensual del Índice General (y, de ser posible, por divisiones COICOP) en formato accesible (CSV) o un extracto tabular.
+
+Análisis detallado:
+1) Cobertura y estructura de los datos
+- Archivo: ipc_largo.parquet
+- Estructura: 8.358 filas, 4 columnas: codigo, producto, indice, fecha.
+- Muestra visible:
+  - Primera fila: Índice General = 111,211057 en 2024-01-01.
+  - Últimas filas (2025-09-01) incluyen:
+    - Roseta de inspección vehicular ≈ 100,000000
+    - Cédula de identidad CI ≈ 100,000000
+    - Servicios religiosos ≈ 129,077790
+- No contamos con:
+  - Serie completa del Índice General para todos los meses.
+  - Fechas mínimas y máximas del conjunto (solo se observan 2024-01 y 2025-09 como ejemplos).
+  - Diccionario de códigos para agrupar en divisiones/Clases COICOP (si “codigo” lo permite).
+
+2) Implicaciones de la muestra disponible
+- El valor del Índice General (111,211 en enero de 2024) sugiere que el nivel del IPC supera en 11,2% al período base (100), pero sin conocer el mes base exacto ni la trayectoria posterior, no es posible estimar:
+  - Inflación mensual (m/m): π_t = (I_t / I_{t-1} - 1).
+  - Inflación interanual (a/a): π_t^12m = (I_t / I_{t-12} - 1).
+  - Inflación acumulada del año: π_acum_YTD = (I_t / I_dic_{año_anterior} - 1).
+- En septiembre de 2025:
+  - Algunos servicios administrados (p.ej., “Roseta de inspección vehicular”, “Cédula de identidad CI”) están ≈ 100, lo que implica ausencia de variación acumulada desde el período base. Esto es típico de precios regulados o con revisiones puntuales, que suavizan su contribución a la inflación.
+  - “Servicios religiosos” ≈ 129,078 indica un aumento acumulado de 29,1% respecto al período base, lo que sugiere presión inflacionaria más marcada en ciertos servicios privados (servicios con mayor componente de costos laborales y menor regulación suelen mostrar mayor inercia).
+- Conclusión parcial: se aprecia heterogeneidad entre rubros con precios administrados (anclados) y servicios privados (dinámicos). Sin embargo, no es posible evaluar tendencia, estacionalidad, picos o puntos de inflexión del Índice General sin la serie completa.
+
+3) Metodología propuesta (a aplicar al disponer de la serie)
+- Cálculos principales:
+  - Variación mensual: π_t = (I_t / I_{t-1} - 1) × 100.
+  - Variación interanual: π_t^12m = (I_t / I_{t-12} - 1) × 100.
+  - Acumulada del año: π_acum_YTD = (I_t / I_dic_{año_anterior} - 1) × 100.
+- Análisis de tendencia y puntos de inflexión:
+  - Medias móviles (3 y 6 meses) y comparación con la tasa interanual para identificar desaceleraciones/aceleraciones.
+  - Detección de extremos: meses con |π_t| en el percentil 90–95 de la distribución histórica.
+- Estacionalidad:
+  - Promedio mensual histórico por mes calendario (enero, febrero, …) y desviación estándar por mes; detección de patrones estacionales por división (si el diccionario COICOP está disponible).
+- Descomposición por rubros/productos:
+  - Ranking de mayores alzas/caídas m/m y a/a en el último mes disponible.
+  - Si se cuenta con ponderaciones, cálculo de contribuciones a la inflación del mes y a/a; si no, análisis no ponderado como aproximación.
+- Validaciones:
+  - Consistencia de fechas, valores faltantes/cero, outliers (índices fuera de rango razonable).
+  - Verificación de bases y empalmes si hubiera cambios metodológicos.
+
+Conclusiones e implicaciones para Bolivia:
+- Con la evidencia puntual:
+  - Algunos precios administrados permanecen anclados alrededor de 100, lo cual atenúa la inflación de corto plazo y reduce la volatilidad, pero puede acumular presiones diferidas si hay rezagos de ajuste.
+  - Ciertos servicios privados muestran aumentos acumulados significativos (p.ej., “Servicios religiosos” ≈ +29% respecto al base), reflejando presiones de costos y posible inercia inflacionaria en el segmento de servicios.
+- Para evaluar la trayectoria reciente de la inflación en Bolivia (tendencia, puntos de inflexión en 2024–2025, estacionalidad) y sus implicaciones sobre poder adquisitivo, política monetaria y precios relativos, es indispensable contar con la serie completa mensual del Índice General y, de ser posible, la desagregación por divisiones con ponderaciones.
+- Próximos pasos:
+  - Por limitaciones del entorno, no puedo leer archivos Parquet (falta el motor pyarrow/fastparquet). Por favor, comparta:
+    - La serie del Índice General (fecha, indice) en CSV o pegada como tabla (al menos 2019–2025 o todo el rango disponible), o
+    - El mismo archivo exportado a CSV.
+  - Con ello entregaré en un informe inmediato:
+    - Inflación m/m, a/a y acumulada a septiembre de 2025.
+    - Tendencias, estacionalidad y puntos de inflexión.
+    - Top rubros con mayores alzas/caídas y, si hay ponderaciones, contribuciones a la variación total.

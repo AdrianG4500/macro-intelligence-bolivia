@@ -1,0 +1,26 @@
+Variable,Unidad,Categoria,Fuente,Valor_Actual,Ultima_Actualizacion
+Crecimiento PIB Real,%,Core Doméstico,INE Informe T3 2025 (),-1.63,2026-06-14
+PIB por Sector (Hidrocarburos y Minería),% Var,Core Doméstico,BCB Reporte T3 2025,-35.6,2026-06-14
+Inflación (IPC),% (Anual),Core Doméstico,BCB Indicadores IPC (),15.05,2026-06-14
+Déficit Fiscal (% del PIB),% del PIB,Core Doméstico,PFF 2025 MEFP/BCB (),9.9,2026-06-14
+Balance Fiscal Primario,% del PIB,Core Doméstico,No encontrado,0.0,2026-06-14
+Deuda Pública / PIB,% del PIB,Core Doméstico,BCB Balanza de Pagos ales (Brutas),23.1,2026-06-14
+Reservas Internacionales (Brutas),Millones USD,Core Doméstico,No encontrado,0.0,2026-06-14
+Cobertura de Reservas (Meses de Importación),Meses,Core Doméstico,No encontrado,0.0,2026-06-14
+Tipo de Cambio Oficial (BOB/USD),BOB/USD,Core Doméstico,Banco Central,6.96,2026-06-14
+Tipo de Cambio Real Efectivo (REER),Índice,Core Doméstico,TradingEconomics (),157.0,2026-06-14
+Balanza de Cuenta Corriente (% del PIB),% del PIB,Core Doméstico,BCB Sep-2025 -78,-1.8,2026-06-14
+Balanza Comercial,Millones USD,Core Doméstico,Trading Economics,213.9,2026-06-14
+Ingresos por Exportación de Gas Natural,Millones USD,Core Doméstico,El Deber PGE 2026,112.0,2026-06-14
+Costo de Subsidio a Combustibles,Millones USD,Core Doméstico,deber.com.bo](https://eldeber.com.bo/pais/arce-ratifica-la-subvencion-y-adopta-10-medidas-para-lidiar-con-la-crisis-de-carburantes_506550?utm_source=openai)),290.0,2026-06-14
+Precio Gas Natural (Contratos Regionales),USD/MMBtu,Externas Críticas,No encontrado,0.0,2026-06-14
+Precio Petróleo (Brent),USD/Barril,Externas Críticas,Trading Economics (),92.87,2026-06-14
+Precio del Zinc,USD/TM,Externas Críticas,Trading Economics (),352.0,2026-06-14
+Precio del Oro,USD/Onza,Externas Críticas,Trading Economics (),433.0,2026-06-14
+Crecimiento PIB - Brasil,%,Externas Críticas,Trading Economics (),2.3,2026-06-14
+Crecimiento PIB - Argentina,%,Externas Críticas,Trading Economics (),4.4,2026-06-14
+Crecimiento PIB - China,%,Externas Críticas,TradingEconomics (),5.0,2026-06-14
+Tasa de Fondos Federales EE.UU.,%,Externas Críticas,TradingEconomics (,3.62,2026-06-14
+Prima de Riesgo Soberano (EMBI),Puntos (bps),Financieras y Riesgo,No encontrado,0.0,2026-06-14
+Deuda Pública Externa,Millones USD,Financieras y Riesgo,BCB,137.0,2026-06-14
+Inversión Extranjera Directa (IED),Millones USD,Financieras y Riesgo,BCB,454.0,2026-06-14

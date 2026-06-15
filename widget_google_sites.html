@@ -1,0 +1,145 @@
+<!-- WIDGET DE CHAT FLOTANTE PARA GOOGLE SITES -->
+<!-- Copia y pega todo este código en un bloque "Insertar Código" en Google Sites -->
+
+<div id="macro-chatbot-container">
+  <!-- Botón flotante -->
+  <button id="chatbot-button" onclick="toggleChat()">
+    <!-- Icono de mensaje -->
+    <svg id="chat-icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+    </svg>
+  </button>
+  
+  <!-- Ventana de Chat (oculta por defecto) -->
+  <div id="chat-window">
+    <div id="chat-header">
+      <span style="font-weight: 600; font-size: 15px;">🤖 Asistente Macroeconómico</span>
+      <button id="close-btn" onclick="toggleChat()">×</button>
+    </div>
+    
+    <!-- ⚠️ IMPORTANTE: Reemplaza la URL a continuación con la URL real de tu aplicación de Streamlit cuando la publiques online -->
+    <iframe id="chat-iframe" src="https://agente-macro-bolivia.streamlit.app/?chat_only=true&embed=true" frameborder="0"></iframe>
+  </div>
+</div>
+
+<style>
+/* Reset básico para el widget */
+#macro-chatbot-container {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Estilo del Botón Flotante */
+#chatbot-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(59, 130, 246, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 999999;
+}
+
+#chatbot-button:hover {
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 6px 22px rgba(37, 99, 235, 0.5);
+}
+
+#chatbot-button:active {
+  transform: scale(0.95);
+}
+
+/* Ventana de Chat */
+#chat-window {
+  display: none;
+  position: fixed;
+  bottom: 92px;
+  right: 20px;
+  width: 400px;
+  height: 600px;
+  max-width: calc(100vw - 40px);
+  max-height: calc(100vh - 130px);
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  flex-direction: column;
+  z-index: 999999;
+  animation: slideUp 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#chat-header {
+  background-color: #1e293b;
+  color: #f8fafc;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #334155;
+}
+
+#close-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  transition: color 0.15s ease;
+}
+
+#close-btn:hover {
+  color: #f8fafc;
+}
+
+#chat-iframe {
+  width: 100%;
+  height: calc(100% - 49px);
+  border: none;
+}
+
+/* Animaciones */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+</style>
+
+<script>
+function toggleChat() {
+  var chatWindow = document.getElementById("chat-window");
+  var chatbotButton = document.getElementById("chatbot-button");
+  if (chatWindow.style.display === "none" || chatWindow.style.display === "") {
+    chatWindow.style.display = "flex";
+    // Cambiar icono a cruz de cerrar
+    chatbotButton.innerHTML = `
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>`;
+  } else {
+    chatWindow.style.display = "none";
+    // Restaurar icono de mensaje original
+    chatbotButton.innerHTML = `
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      </svg>`;
+  }
+}
+</script>

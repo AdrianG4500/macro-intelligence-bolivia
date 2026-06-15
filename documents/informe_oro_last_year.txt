@@ -1,0 +1,60 @@
+Título: Evolución del precio del oro (USD/oz) — 24/oct/2024 a 24/oct/2025 e implicaciones para Bolivia
+
+Resumen ejecutivo:
+- En el último año, el precio del oro subió 49.13%, pasando de 2,734.90 a 4,078.50 USD/oz.
+- El máximo del período fue 4,125.50 USD/oz (23/oct/2025); el cierre quedó 1.14% por debajo de ese pico, señalando momentum todavía positivo al final de la muestra.
+
+Análisis detallado:
+1) Datos y metodología
+- Fuente: archivo “oro_last_year.parquet”.
+- Cobertura: 253 observaciones diarias entre 24/10/2024 y 24/10/2025.
+- Variables: fecha, precio (USD/oz).
+- Cálculos clave:
+  - Variación porcentual anual: (P_fin / P_ini − 1) = (4,078.50 / 2,734.90 − 1) = 49.13%.
+  - Cambio absoluto: 4,078.50 − 2,734.90 = 1,343.60 USD/oz.
+  - Retorno geométrico diario aproximado: (1 + 0.4913)^(1/252) − 1 ≈ 0.159% diario.
+  - Drawdown al cierre vs. máximo: (4,078.50 / 4,125.50 − 1) = −1.14%.
+
+2) Tendencias y puntos de inflexión
+- Tendencia: La subida neta del 49.13% con un máximo histórico del período registrado el 23/oct/2025 y un cierre apenas −1.14% por debajo sugiere una fase alcista sólida a lo largo del año, con máximos recientes hacia el final de la muestra.
+- Picos y caídas:
+  - Pico del período: 4,125.50 USD/oz el 23/oct/2025.
+  - Cierre: 4,078.50 USD/oz el 24/oct/2025.
+  - Mínimo del período: no disponible con la información parcial mostrada; no se puede identificar el trough anual con precisión.
+- Estacionalidad: No es posible evaluarla rigurosamente sin la serie completa para desagregar por meses o semanas. En general, la estacionalidad en oro suele ser acotada frente a factores macro-financieros (tasas reales, dólar, flujos de refugio).
+
+3) Lectura macroeconómica y teoría
+- El oro tiende a apreciarse cuando:
+  - Caen las tasas reales globales o aumenta la probabilidad de relajación monetaria (menor costo de oportunidad de mantener oro).
+  - Se eleva la aversión al riesgo/geopolítica (demanda de activo refugio).
+  - Bancos centrales incrementan compras netas de oro (demanda estructural).
+- La magnitud del avance (≈+49% a/a) es coherente con un contexto internacional de mayor demanda por activos refugio y/o expectativas de menores tasas reales; sin la descomposición de factores, no se puede atribuir causalidad específica desde estos datos.
+
+4) Implicaciones para Bolivia
+- Sector externo y balanza comercial:
+  - Mejora de términos de intercambio para exportaciones auríferas; a igual volumen, mayores valores de exportación y potencial apoyo al saldo comercial.
+- Ingresos fiscales y regalías:
+  - Un precio más alto eleva la base potencial de regalías e impuestos del sector aurífero. La volatilidad del oro sugiere prudencia al extrapolar ingresos.
+- Reservas internacionales (RIN):
+  - Si parte de las RIN está denominada en oro, una mayor cotización mejora la valuación contable. En caso de ventas de oro para liquidez, la sensibilidad de la posición a los precios se vuelve relevante.
+- Tipo de cambio y liquidez en divisas:
+  - Mayores ingresos por oro pueden aliviar presiones cambiarias si se traducen en mayores entradas netas de divisas. La transmisión depende de la formalidad/exportación efectiva del metal.
+- Riesgos y sostenibilidad:
+  - La subida de precios incentiva ampliaciones de oferta (incluida minería informal), con potenciales externalidades ambientales y de trazabilidad. La exposición fiscal y externa a la volatilidad del oro puede aumentar.
+
+Limitaciones
+- No se cuenta con la serie completa en este intercambio para calcular volatilidad histórica, retornos mensuales, máximos drawdowns intra-anuales, o identificar fechas exactas de inflexión salvo el máximo y el cierre reportados. Los resultados se limitan a los puntos y agregados provistos.
+
+Conclusiones y recomendaciones
+- El oro registró un rally anual significativo (+49.13%), con máximos al final del período y un cierre apenas −1.14% por debajo del pico. Esto sugiere una tendencia alcista aún vigente a la fecha de cierre.
+- Para Bolivia, un mayor precio del oro probablemente:
+  - Apoye el valor de las exportaciones y, potencialmente, la recaudación por regalías.
+  - Mejore, si corresponde, la valuación de reservas en oro.
+  - Atenúe presiones de liquidez externa, condicionadas por el grado de formalidad y canalización de divisas.
+- Recomendaciones de política/gestión:
+  - Presupuestar con escenarios conservadores, dada la volatilidad del oro.
+  - Fortalecer trazabilidad y formalización del sector para capturar mejor los beneficios externos y fiscales.
+  - Evaluar coberturas parciales de ingresos fiscales ligados al oro para mitigar ciclos de precios.
+  - Monitorear la sensibilidad de las RIN a la cotización del oro y definir lineamientos claros de gestión de reservas.
+
+Si desea, puedo procesar el archivo completo y anexar un apéndice estadístico con: distribución y volatilidad de retornos diarios, drawdowns, retornos mensuales, y gráficos. Para ello, por favor compárteme la serie en formato CSV o habilita la lectura del parquet (no dispongo del motor de lectura de Parquet en este entorno).
